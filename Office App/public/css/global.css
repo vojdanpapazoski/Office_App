@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+  }
+
+
+.registration,
+.login,
+.default
+{
+  background-color: rgb(210, 254, 255);
+  margin: 1em;
+  border-radius: 44px;
+  height: 95vh;
+  text-align: center;
+  color: rgba(247, 16, 16, 0.479);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+#email, #password, #name {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 45px;
+  margin:1em;
+  width: 18em;
+  height: 3.6em;
+  padding: 1.4em;
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 0%);
+  background-color: white;
+  outline: none;
+}
+
+#email:hover, #password:hover, #name:hover, .particular-status:hover, .my-status:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  transform: translateZ(5px);
+  transition: transform 0.5s, box-shadow 0.6s;
+}
+
+#email, #password, #name, .particular-status, .my-status {
+  transition: transform 0.5s, box-shadow 0.6s;
+}
+
+
+
+button{
+  border: none;
+  border-radius: 45px;
+  width: 9em;
+  font-weight: bold;
+  padding: 11px;
+  font-size: .9rem;
+  margin-top: 3em;
+  color: rgba(255, 0, 0, 0.350);
+  background-color: white;
+}
+button,
+.myprofile-home-logo,
+.plus-logo,
+.myprofile-logo,
+.search-logo,
+.logout-btn:hover {
+  cursor: pointer;
+  transition: box-shadow 0.6s;
+  box-shadow: none;
+}
+
+button:hover,
+.myprofile-home-logo:hover,
+.plus-logo:hover,
+.myprofile-logo:hover,
+.search-logo:hover, 
+.logout-btn:hover {
+  box-shadow: 0 0 7px 5px rgba(189, 33, 163, 0.237);
+}
+
+button:active, 
+.myprofile-home-logo:active, 
+.plus-logo:active, 
+.myprofile-logo:active, 
+.search-logo:active
+ {
+  cursor: pointer;
+  box-shadow: 0 0 7px 5px rgba(88, 20, 77, 0.237);
+  background-color: rgb(210, 254, 255);
+}
+
+
+.onyourmind:hover, .typeinput:hover {
+  transform: translateX(4px);
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.p-subtitle{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3em;
+  margin-top: 2.2em;
+}
+
+.p-title{
+  font-weight: bold;
+  margin-top:1em ;
+  margin-bottom: 2em;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.700);
+}
+
+h1{
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+
+.user{
+  font-size: 0.8rem;
+  margin-top: 3em;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+.content{
+  font-size: 0.7rem;
+  padding-right: 2em;
+}
+
+.user, .content {
+  color: rgba(0, 0, 0, 0.700);
+  margin-left: 2em;  
+}
+
+
+@media (min-width: 768px) {
+  body {
+    background-color: rgb(210, 254, 255);
+  }
+}

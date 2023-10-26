@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../public/../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../public/../css/images.css">
+    <link rel="stylesheet" type="text/css" href="../public/../css/myprofile.css">
+    <title>Office Chat App MyProfile</title>
+</head>
+<body>
+<div class="myProfile">
+    <div class="upper-section">
+        <form id="userForm">
+            <div class="intro">
+                <a href="/home"><img src="../public/../img/home-logo.png" alt="home-logo" class="myprofile-home-logo"></a>
+                <p class="myprofileparagraph">My Profile</p>
+                <hr class="hrline">
+            </div>
+        </form>
+    </div>
+    <div class="middle-section">
+        <img src="../img/<%= image %>" alt="profile-picture-man-logo" class="myprofileMAIN-img">
+        <h4 class="username"><%= user %></h4>
+    </div>
+    <div class="statuses">
+        <div class="myself">
+            <p class="mystatuses">My Statuses:</p>
+            <% myStatuses.forEach(status => { %>
+            <div class="my-status">
+                <div class="me">
+                    <img src="../img/<%= image %>" alt="profile-picture-man-logo" class="myprofile-img">
+                    <h4 class="username_in_content"><%= user %></h4>
+                    </div>
+                <p class="mystatusesparagraph" id="status-<%= status._id %>" contentEditable="true"
+                   onblur="saveEdit('<%= status._id %>')" onkeydown="checkEnter(event, '<%= status._id %>')"
+                   onclick="startEdit('<%= status._id %>')"><%= status.content %></p>
+                   <div class="modifying-icons">
+                    <p class="time"><%= status.time %></p>
+                   <img src="../public/../img/edit-pen.jpg" alt="edit-pen" class="edit-pen" onclick="startEdit('<%= status._id %>')">
+                    <a href="/removeStatus/<%= status._id %>">
+                    <img src="../public/../img/delete.png" alt="delete" class="delete-basket">
+                    </a> 
+                    </div>
+            </div>
+            <br>
+            <% }) %>
+            <div class="logout">
+                <a href="/"><button class="logout-btn">Log out</button></a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <script>
+        function startEdit(statusId) {
+            const paragraph = document.getElementById(`status-${statusId}`);
+            paragraph.setAttribute("contentEditable", "true");
+            paragraph.classList.add("edit-input")
+            paragraph.focus();
+        }
+
+        function saveEdit(statusId) {
+            const paragraph = document.getElementById(`status-${statusId}`);
+            paragraph.setAttribute("contentEditable", "false");
+
+            //EXTRACTING MODIFYING TEXT
+            const updatedContent = paragraph.innerText;
+
+            const url = `/modifyStatus/${statusId}`;
+            const data = { content: updatedContent };
+            fetch(url, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Content updated successfully.');
+                    } else {
+                        console.error('Failed to update content.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function checkEnter(event, statusId) {
+    if (event.key === "Enter") {
+        event.preventDefault(); 
+        saveEdit(statusId); 
+        const paragraph = document.getElementById(`status-${statusId}`);
+        paragraph.blur(); 
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* LOGOS IN HOME */
+.icons-section{
+align-items: center;
+display: flex;
+}
+
+.plus-logo{
+width: 2em;
+height: 1.5em;
+margin-right: 0.5em;
+margin-bottom: 1em;
+cursor: pointer;
+
+}
+
+.myprofile-logo{
+width: 1.3em;
+position: relative;
+margin-top: 3em;
+margin-right: 2em;
+cursor: pointer;
+}
+
+.search-logo{
+width: 1.3em;
+margin-right: -1.5em;
+margin-bottom: 1em;
+cursor: pointer;
+}
+
+.profile-pictures-home {
+    width: 1.8em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-left: 0.7em;
+    overflow:hidden;
+}
+
+/* LOGOS IN MY PROFILE */
+.myprofile-home-logo{
+display: flex;
+width: 2.3em;
+margin-top: 2em;
+margin-left: 2em;
+}
+
+.myprofileMAIN-img{
+width: 3em;   
+height: 3em;
+border-radius: 50%;
+}
+
+.myprofile-img{
+    width: 1.5em;   
+    height: 1.5em;
+    border-radius: 50%;
+    margin-left: -1em;
+    margin-right: 1em;
+    }
+
+.edit-pen {
+    width: 1.5em;
+    margin-bottom: 0.2em;
+}
+
+
+.delete-basket{
+    width: 1.3em;
+    margin-left: 0.4em;
+}
+
+@media (min-width: 768px) {
+ .myprofile-logo {
+    width: 2em;
+    position: relative;
+    margin-top: 3.5em;
+    margin-right: 4em;
+    margin-bottom: 1em;
+    cursor: pointer;
+ }
+ .plus-logo {
+    width: 2.3em;
+    height: 1.8em;
+    margin-right: 1.5em;
+    margin-bottom: 2.5em;
+    cursor: pointer;
+    
+ }
+
+ .search-logo {
+    width: 1.8em;
+    margin-right: -3.6em;
+    margin-bottom: 2.5em;
+    cursor: pointer;
+ }
+
+ .myprofile-home-logo{
+    width: 2.7em;
+    height: 1.8em;
+ }
+
+}

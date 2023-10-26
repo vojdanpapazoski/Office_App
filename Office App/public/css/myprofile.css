@@ -1,0 +1,112 @@
+.myProfile
+{
+  background-color: rgb(210, 254, 255);
+  background-size: 100% 95vh;
+  margin: 1em;
+  border-radius: 44px;
+  text-align: center;
+  color: rgba(247, 16, 16, 0.479);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.myprofileparagraph{
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.hrline {
+  color: black;
+  width: 90%;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.edit-input {
+outline: none;
+border: none;
+}
+
+.myself{
+  width: 85%;
+}
+.mystatuses{
+  text-align: left;
+  margin-left: 1em;
+}
+
+.username,.mystatuses{
+  color: rgba(255, 0, 0, 0.350);
+  margin-top: 0.5em;
+}
+
+.username_in_content{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  margin-left: -0.7em;
+}
+
+.me{
+  display: flex;
+}
+
+.my-status {
+  background-color: white;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  border-radius: 40px;
+  padding-left:2em;
+  padding-right:2em;
+
+}
+
+.statuses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mystatusesparagraph{
+  text-align: left;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.modifying-icons{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.time {
+  margin-right: 1.5em;
+  font-size: 0.5em;
+  color: rgba(0, 0, 0, 0.700);
+}
+
+
+.edit-pen:hover, .delete-basket:hover {
+  transform: translateY(-4px);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.logout-btn{
+  width:80%;
+}
+
+
+@media (min-width: 768px) {
+  .my-status{
+    padding-bottom:0.25em;
+    padding-top:0.25em;
+ }
+ .modifying-icons{
+  margin-right: 1.5em;
+ }
+ .me{
+  padding-top: 0.25em;
+ }
+}

@@ -1,0 +1,180 @@
+.home {
+  background-color: rgb(210, 254, 255);
+  margin: 1em;
+  border-radius: 44px;
+  text-align: center;
+  color: rgba(247, 16, 16, 0.479);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.upper-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-feed {
+  align-items: center;
+  display: flex;
+}
+
+.inside-title {
+  padding-bottom: 1.5em;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-left: 1.5em;
+  margin-bottom: -1em;
+  margin-top: 0.5em;
+  font-weight: 500;
+}
+
+.inside-subtitle {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-left: 1.3em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+.middle-section {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.status-content {
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  height: 5.8em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  border-radius: 40px;
+}
+
+
+
+.onyourmind-label,
+.typeinput {
+  margin-left: 2em;
+  display: flex;
+  border: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.8em;
+}
+
+.onyourmind-label {
+  display: flex;
+  margin-left: 2em;
+}
+
+
+.hrline {
+  color: black;
+  width: 97%;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.statuses {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  padding-top: 0.3em;
+}
+.user {
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0.6em;
+}
+
+.particular-status {
+  background-color: white;
+  border-radius: 25px;
+  padding-bottom: 0.7em;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.circles {
+  width: 2.5em;
+  margin-top: 0.8em;
+}
+
+.time-home {
+margin-left: 3em;
+font-size: 0.5em;
+color: rgba(0, 0, 0, 0.700);
+}
+
+
+@media (min-width: 768px) {
+  .inside-title{
+      margin-top: 2em;
+      font-size: 0.7em;
+      margin-right: 10em;
+      color: rgba(247, 16, 16, 0.479);
+  }
+
+  .circles {
+    margin-top: 1em;
+  }
+
+  .inside-subtitle{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-left: 3em;
+    margin-bottom: 0;
+    margin-top: 0.8em
+  }
+
+  .status-content {
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+  }
+
+  .linewithin{
+    width: 90%;
+    margin-top: 1em;
+  }
+
+  .onyourmind-label, .typeinput{
+    margin-left: 5em;
+    padding: 0;
+  }
+  .onyourmind-label {
+margin-top: 21m;
+  }
+
+  .typeinput{
+    margin-top: 2em;
+  }
+.particular-status{
+  height: 6.5em;
+}
+
+.content {
+  margin-bottom: 0em;
+}
+
+}

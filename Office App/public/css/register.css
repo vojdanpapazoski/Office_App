@@ -1,0 +1,10 @@
+form{
+   margin-bottom: 3em;
+   margin-top: 3em;
+}
+
+@media (min-width: 768px) {
+   .p-title{
+      display: none;
+   }
+  }

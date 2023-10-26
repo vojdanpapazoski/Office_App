@@ -1,0 +1,32 @@
+.welcome-default {
+  position: relative;
+  margin-top: 6em;
+  font-size: 0.9rem;
+  animation: move 1s alternate-reverse infinite;
+  cursor: pointer;
+}
+
+.default-buttons {
+    margin-bottom: 10em;
+  }
+
+.default-login,
+.default-register {
+  margin:0.5em;
+  width: 10em;
+  font-size: 1.4em;
+  padding: 0.3em;
+  transition: transform .5s;
+  transform: translatey(-15px);
+  transition: .99s;
+  }
+
+   /* KEY FRAMES  */
+   @keyframes move {
+    from {
+      transform: translateY(-10px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
